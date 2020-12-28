@@ -6,12 +6,12 @@ names(data1)<-c("Date","Time","Global_active_power","Global_reactive_power","Vol
 #subsetting the data we need 
 maindata<-subset(data1,data1$Date=="1/2/2007"|data1$Date=="2/2/2007")
 
+#creating histogram
 hist(as.numeric(as.character(maindata$Global_active_power)),col="red",main="Global Active Power", xlab="Global Active Power(kilowatts)")
 
 title(main="Global Active Power")
 
 #Creating png file
-png("plot1.png", width=480, height=480)
 
 dev.copy(png, filename="plot1.png")
 
